@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/PengJiyuan/random-data/issues"
   },
-  "homepage": "https://github.com/PengJiyuan/random-data#readme"
+  "homepage": "https://github.com/PengJiyuan/random-data#readme",
+  "devDependencies": {
+    "rollup": "^0.63.2"
+  }
 }
