@@ -1,0 +1,31 @@
+{
+  "name": "random-data",
+  "version": "0.0.0",
+  "description": "Random generate name, email, address, id...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PengJiyuan/random-data.git"
+  },
+  "keywords": [
+    "random",
+    "data",
+    "fake",
+    "mock",
+    "name",
+    "email",
+    "address",
+    "id",
+    "info",
+    "person"
+  ],
+  "author": "PengJiyuan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PengJiyuan/random-data/issues"
+  },
+  "homepage": "https://github.com/PengJiyuan/random-data#readme"
+}
