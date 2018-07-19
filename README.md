@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/PengJiyuan/fakeme.svg?branch=master)](https://travis-ci.org/PengJiyuan/fakeme)
+
 # fakeme
 随机生成人名，手机号，邮箱，性别，id等信息，接口简单，数据覆盖全。
 
