@@ -1,6 +1,6 @@
 {
   "name": "fakedata",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Random generate name, email, address, id...",
   "main": "./lib/fakedata.cjs.js",
   "module": "./lib/fakedata.es.js",
