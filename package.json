@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "rollup -c -f cjs -o ./lib/fakedata.cjs.js -w",
-    "build-cjs": "rollup -c -f cjs -o ./lib/fakedata.cjs.js"
+    "build-cjs": "rollup -c -f cjs -o ./lib/fakedata.cjs.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
