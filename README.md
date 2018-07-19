@@ -3,21 +3,21 @@
 
 ## Install
 
-* NPM
+#### NPM
 
 `npm i fakeme`
 
-* Broswer
+#### Broswer
 
 [Source Code](https://github.com/PengJiyuan/fakeme/blob/master/lib/fakeme.umd.min.js);
 
-* CDN
+#### CDN
 
 https://unpkg.com/fakeme@0.1.0/lib/fakedata.umd.min.js (更改fakeme后边的version号，获取指定版本的源文件)
 
 ## Usage
 
-* Node
+#### Node
 
 ```javascript
 const FakeMe = require('fakeme');
@@ -34,7 +34,7 @@ fm.sex({lang: 'en'}); // [ 'female' ]
 fm.random(['a', 'b', 'c', 'd', 'e', 'f', 'g'], 5); // [ 'a', 'd', 'c', 'c', 'd' ]
 ```
 
-* ES Module
+#### ES Module
 
 ```javascript
 import FakeMe from 'fakeme';
@@ -42,7 +42,7 @@ const fm = new FakeMe();
 fm.name();
 ```
 
-* 浏览器
+#### 浏览器
 
 ```html
 <script src="https://unpkg.com/fakeme@0.1.0/lib/fakedata.umd.min.js"></script>
@@ -56,11 +56,11 @@ fm.name();
 
 ### FakeMe(opts: Object)
 
-* opts.lang
+#### opts.lang
 
 指定全局语言 [默认: `zh`]，`lang`的值只能为`zh`或者`en`。(这个值会被具体调用的函数里传的`lang`覆盖)
 
-* opts.sex
+#### opts.sex
 
 指定全局性别 [默认: `male`]，`sex`的值只能为`male`或者`female`。(这个值会被具体调用的函数里传的`sex`覆盖)
 
@@ -73,7 +73,7 @@ const fm = new FakeMe();
 
 返回值为数组。
 
-* opts.lang
+#### opts.lang
 
 `可选`
 
@@ -81,7 +81,7 @@ const fm = new FakeMe();
 
 如果不指定，默认使用全局配置的`lang`。`lang`的值只能为`zh`或者`en`。
 
-* opts.sex
+#### opts.sex
 
 `可选`
 
@@ -89,7 +89,7 @@ const fm = new FakeMe();
 
 如果不指定，默认使用全局配置的`sex`。`sex`的值只能为`male`或者`female`。
 
-* opts.count
+#### opts.count
 
 `可选`
 
@@ -97,7 +97,7 @@ const fm = new FakeMe();
 
 这个参数指定随机生成名字的个数。
 
-* opts.lastName
+#### opts.lastName
 
 `可选`
 
@@ -111,7 +111,7 @@ fm.name({lastName: '李'}); // [ '李秋白' ]
 
 返回值为数组。
 
-* opts.type
+#### opts.type
 
 `可选`
 
@@ -123,13 +123,13 @@ fm.name({lastName: '李'}); // [ '李秋白' ]
   * `number` - 邮箱的前半部分是随机的一串数字
   * `letter` - 邮箱的前半部分是随机的一串字母
 
-* opts.sex
+#### opts.sex
 
 `可选`
 
 这个参数在使用type为`name`时会生效，指定英文名字是男性还是女性的。
 
-* opts.count
+#### opts.count
 
 `可选`
 
@@ -137,7 +137,7 @@ fm.name({lastName: '李'}); // [ '李秋白' ]
 
 这个参数指定随机生成邮箱的个数。
 
-* opts.suffix
+#### opts.suffix
 
 `可选`
 
@@ -151,7 +151,7 @@ fm.email({suffix: '@qq.com'}); // [ 'kennedy@qq.com' ]
 
 返回值是一个数组。
 
-* opts.lang
+#### opts.lang
 
 `可选`
 
@@ -159,7 +159,7 @@ fm.email({suffix: '@qq.com'}); // [ 'kennedy@qq.com' ]
 
 如果不指定，默认使用全局配置的`lang`。`lang`的值只能为`zh`或者`en`。
 
-* opts.count
+#### opts.count
 
 `可选`
 
@@ -171,7 +171,7 @@ fm.email({suffix: '@qq.com'}); // [ 'kennedy@qq.com' ]
 
 返回值是一个数组。
 
-* opts.length
+#### opts.length
 
 `可选`
 
@@ -179,7 +179,7 @@ fm.email({suffix: '@qq.com'}); // [ 'kennedy@qq.com' ]
 
 这个参数指定生成Id的长度。
 
-* opts.count
+#### opts.count
 
 `可选`
 
@@ -191,7 +191,7 @@ fm.email({suffix: '@qq.com'}); // [ 'kennedy@qq.com' ]
 
 这个函数可以指定一个随机区域，然后从指定的列表中获得随机的元素。
 
-* list
+#### list
 
 `可选`
 
@@ -199,7 +199,7 @@ fm.email({suffix: '@qq.com'}); // [ 'kennedy@qq.com' ]
 
 这个参数指定随机的区域。
 
-* count
+#### count
 
 `可选`
 
