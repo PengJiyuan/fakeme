@@ -6,10 +6,20 @@ describe('test random email.', () => {
     const expected = [
       expect.stringMatching(/^[A-Za-z0-9]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/)
     ];
-    const randomName = fd.email({type: 'name', count: 10});
+    const randomEmailName = fd.email({type: 'name', count: 10});
+    const randomEmailNumber = fd.email({type: 'number', count: 10});
+    const randomEmailLetter = fd.email({type: 'letter', count: 10});
 
-    expect(randomName.length).toBe(10);
-    expect(randomName).toEqual(
+    expect(randomEmailName.length).toBe(10);
+    expect(randomEmailNumber.length).toBe(10);
+    expect(randomEmailLetter.length).toBe(10);
+    expect(randomEmailName).toEqual(
+      expect.arrayContaining(expected)
+    );
+    expect(randomEmailNumber).toEqual(
+      expect.arrayContaining(expected)
+    );
+    expect(randomEmailLetter).toEqual(
       expect.arrayContaining(expected)
     );
   });
