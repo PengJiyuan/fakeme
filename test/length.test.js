@@ -1,6 +1,6 @@
 // test whether the length of data is equal to count.
 
-const fakeData = require('../lib/fakedata.cjs');
+const fakeData = require('../lib/fakeme.cjs');
 const fd = new fakeData();
 
 test('test data count (names, email suffixs)', () => {

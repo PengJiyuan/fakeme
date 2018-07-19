@@ -1,6 +1,6 @@
 // check error throw
 
-const fakeData = require('../lib/fakedata.cjs');
+const fakeData = require('../lib/fakeme.cjs');
 const commonFd = new fakeData();
 
 describe('test error throw.', () => {

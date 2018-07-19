@@ -1,4 +1,4 @@
-const fakeData = require('../lib/fakedata.cjs');
+const fakeData = require('../lib/fakeme.cjs');
 const fd = new fakeData();
 
 describe('test random sex.', () => {

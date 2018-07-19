@@ -1,4 +1,4 @@
-const RandomData = require('../lib/fakedata.cjs');
+const RandomData = require('../lib/fakeme.cjs');
 
 const rd = new RandomData({
   lang: 'zh'

@@ -2,19 +2,19 @@
   "name": "fakeme",
   "version": "0.1.0",
   "description": "Random generate name, email, address, id...",
-  "main": "./lib/fakedata.cjs.js",
-  "module": "./lib/fakedata.es.js",
+  "main": "./lib/fakeme.cjs.js",
+  "module": "./lib/fakeme.es.js",
   "scripts": {
-    "dev": "rollup -c -f cjs -o ./lib/fakedata.cjs.js -w",
-    "build-cjs": "rollup -c -f cjs -o ./lib/fakedata.cjs.js",
-    "build-umd-min": "rollup -c -f umd -n FakeData -o ./lib/fakedata.umd.min.js --environment min",
-    "build-es": "rollup -c -f es -o ./lib/fakedata.es.js",
+    "dev": "rollup -c -f cjs -o ./lib/fakeme.cjs.js -w",
+    "build-cjs": "rollup -c -f cjs -o ./lib/fakeme.cjs.js",
+    "build-umd-min": "rollup -c -f umd -n FakeData -o ./lib/fakeme.umd.min.js --environment min",
+    "build-es": "rollup -c -f es -o ./lib/fakeme.es.js",
     "build-all": "npm run build-cjs && npm run build-umd-min && npm run build-es",
     "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PengJiyuan/fakedata.git"
+    "url": "git+https://github.com/PengJiyuan/fakeme.git"
   },
   "keywords": [
     "random",
@@ -31,9 +31,9 @@
   "author": "PengJiyuan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PengJiyuan/fakedata/issues"
+    "url": "https://github.com/PengJiyuan/fakeme/issues"
   },
-  "homepage": "https://github.com/PengJiyuan/fakedata#readme",
+  "homepage": "https://github.com/PengJiyuan/fakeme#readme",
   "devDependencies": {
     "jest": "^23.4.1",
     "pre-commit": "^1.2.2",
