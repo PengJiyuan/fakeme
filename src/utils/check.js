@@ -10,18 +10,18 @@ export default (opts) => {
     throw 'param option should be an object';
   }
   if (opts && opts.lang && !~langs.indexOf(opts.lang)) {
-    throw `lang should be one of ${langs}`;
+    throw `lang should be one of ${langs.join(',')}`;
   }
   if (opts && opts.sex && !~sexs.indexOf(opts.sex)) {
-    throw `sex should be one of ${sexs}`;
+    throw `sex should be one of ${sexs.join(',')}`;
   }
   if (opts && opts.type && !~emailTypes.indexOf(opts.type)) {
-    throw `type should be one of ${emailTypes}`;
+    throw `type should be one of ${emailTypes.join(',')}`;
   }
   if (opts && opts.count && !isNumber(opts.count)) {
-    throw `count must be a number type`;
+    throw 'count must be a number type';
   }
   if (opts && opts.length && !isNumber(opts.count)) {
-    throw `length must be a number type`;
+    throw 'length must be a number type';
   }
 };
