@@ -8,9 +8,11 @@ import {
 import {
   checkGlobal,
   checkName,
-  checkEmail
+  checkEmail,
+  checkSex
 } from './utils/check';
 import getEmail from './email/index';
+import getSex from './sex/index';
 
 class Fake {
   constructor(opts) {
@@ -76,6 +78,15 @@ class Fake {
 
   id(length = 10) {
     return randomId(length);
+  }
+
+  sex(opts) {
+    checkSex(opts);
+    const _defaults = {
+      lang: this.opts.lang
+    };
+    const _opts = Object.assign({}, _defaults, opts || {});
+    return getSex(_opts);
   }
 }
 

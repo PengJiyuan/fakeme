@@ -28,3 +28,12 @@ export const checkEmail = (opts) => {
     throw `sex should be one of ${emailTypes}`;
   }
 };
+
+export const checkSex = (opts) => {
+  if (opts && !isObject(opts)) {
+    throw 'param option should be an object';
+  }
+  if (opts && opts.lang && !~langs.indexOf(opts.lang)) {
+    throw `sex should be one of ${langs}`;
+  }
+};
