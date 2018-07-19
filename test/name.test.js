@@ -8,6 +8,8 @@ describe('test random name.', () => {
       expect.stringMatching(/[\u4E00-\u9FFF]+/)
     ];
     const randomName = fd.name({lang: 'zh', sex: 'male',  count: 10});
+
+    expect(randomName.length).toBe(10);
     expect(randomName).toEqual(
       expect.arrayContaining(expected)
     );
@@ -19,8 +21,16 @@ describe('test random name.', () => {
       expect.stringMatching(/^[a-zA-Z]+/)
     ];
     const randomName = fd.name({lang: 'en', sex: 'female', count: 10});
+
+    expect(randomName.length).toBe(10);
     expect(randomName).toEqual(
       expect.arrayContaining(expected)
     ); 
+  });
+
+  it('matches if specify lastName is equal to output name lastName', () => {
+    const lastName = 'Thomas';
+    const randomName = fd.name({lang: 'en', lastName});
+    expect(randomName[0].split(' ')[1]).toBe(lastName);
   });
 });

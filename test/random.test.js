@@ -1,12 +1,12 @@
 const fakeData = require('../lib/fakedata.cjs');
 const fd = new fakeData();
 
-describe('test random id.', () => {
-  it('matches if id format is correct', () => {
+describe('test function Fake.random.', () => {
+  it('matches if sex is Chinese language.', () => {
     const expected = [
-      expect.stringMatching(/^[a-zA-Z0-9_~]{10}$/)
+      expect.stringMatching(/^[a-zA-Z]+$/)
     ];
-    const randomName = fd.id({length: 10, count: 10});
+    const randomName = fd.random(['Javascript', 'Css', 'Html', 'React', 'Vue'], 10);
 
     expect(randomName.length).toBe(10);
     expect(randomName).toEqual(
