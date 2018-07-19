@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "rollup -c -f cjs -o ./lib/fakedata.cjs.js -w",
     "build-cjs": "rollup -c -f cjs -o ./lib/fakedata.cjs.js",
+    "build-umd-min": "rollup -c -f umd -n FakeData -o ./lib/fakedata.umd.min.js --environment min",
+    "build-es": "rollup -c -f es -o ./lib/fakedata.es.js",
+    "build-all": "npm run build-cjs && npm run build-umd-min && npm run build-es",
     "test": "jest"
   },
   "repository": {
