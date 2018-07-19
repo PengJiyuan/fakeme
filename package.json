@@ -36,6 +36,7 @@
   "homepage": "https://github.com/PengJiyuan/fakedata#readme",
   "devDependencies": {
     "jest": "^23.4.1",
+    "pre-commit": "^1.2.2",
     "rollup": "^0.63.2",
     "rollup-plugin-buble": "^0.19.2",
     "rollup-plugin-butternut": "^0.1.0"
@@ -43,5 +44,9 @@
   "jest": {
     "coverageDirectory": "./coverage/",
     "collectCoverage": true
-  }
+  },
+  "pre-commit": [
+    "build-all",
+    "test"
+  ]
 }
