@@ -1,5 +1,5 @@
 const RandomData = require('../lib/fakeme.cjs');
 
-const rd = new RandomData();
+const fm = new RandomData();
 
-console.log(rd.random(['a', 'b', 'c', 'd'], 10));
+console.log(fm.random(['a', 'b', 'c', 'd', 'e', 'f', 'g'], 5));

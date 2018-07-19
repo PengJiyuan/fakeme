@@ -1,12 +1,5 @@
 const RandomData = require('../lib/fakeme.cjs');
 
-const rd = new RandomData({
-  lang: 'zh',
-  sex: 'male'
-});
+const rd = new RandomData();
 
-console.log(rd.email({
-  type: 'name',
-  suffix: '@isweety.me',
-  count: 10
-}));
+console.log(rd.email({suffix: '@qq.com'}));
