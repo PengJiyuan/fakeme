@@ -4,7 +4,8 @@
   "description": "Random generate name, email, address, id...",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "rollup -c -f cjs -o ./lib/random-data.cjs.js -w",
+    "build-cjs": "rollup -c -f cjs -o ./lib/random-data.cjs.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,8 @@
   },
   "homepage": "https://github.com/PengJiyuan/random-data#readme",
   "devDependencies": {
-    "rollup": "^0.63.2"
+    "rollup": "^0.63.2",
+    "rollup-plugin-buble": "^0.19.2",
+    "rollup-plugin-butternut": "^0.1.0"
   }
 }
