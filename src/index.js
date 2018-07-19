@@ -13,6 +13,7 @@ import {
 } from './utils/check';
 import getEmail from './email/index';
 import getSex from './sex/index';
+import { isArray } from './utils/is';
 
 class Fake {
   constructor(opts) {
@@ -87,6 +88,17 @@ class Fake {
     };
     const _opts = Object.assign({}, _defaults, opts || {});
     return getSex(_opts);
+  }
+
+  random(list = [], count = 1) {
+    const length = list.length;
+    let result = [];
+    if (isArray(list)) {
+      for (let i = 0; i < count; i++) {
+        result.push(list[random(0, length - 1)]);
+      }
+    }
+    return result;
   }
 }
 
