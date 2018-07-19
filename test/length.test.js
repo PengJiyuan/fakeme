@@ -1,0 +1,1 @@
+const fakeData = require('../lib/fakedata.cjs');

@@ -1,15 +1,15 @@
 {
-  "name": "random-data",
+  "name": "fakedata",
   "version": "0.0.0",
   "description": "Random generate name, email, address, id...",
   "main": "index.js",
   "scripts": {
-    "dev": "rollup -c -f cjs -o ./lib/random-data.cjs.js -w",
-    "build-cjs": "rollup -c -f cjs -o ./lib/random-data.cjs.js"
+    "dev": "rollup -c -f cjs -o ./lib/fakedata.cjs.js -w",
+    "build-cjs": "rollup -c -f cjs -o ./lib/fakedata.cjs.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PengJiyuan/random-data.git"
+    "url": "git+https://github.com/PengJiyuan/fakedata.git"
   },
   "keywords": [
     "random",
@@ -26,9 +26,9 @@
   "author": "PengJiyuan",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PengJiyuan/random-data/issues"
+    "url": "https://github.com/PengJiyuan/fakedata/issues"
   },
-  "homepage": "https://github.com/PengJiyuan/random-data#readme",
+  "homepage": "https://github.com/PengJiyuan/fakedata#readme",
   "devDependencies": {
     "jest": "^23.4.1",
     "rollup": "^0.63.2",
