@@ -1,5 +1,6 @@
 import namesEn from './name/en';
 import namesZh from './name/zh';
+import emailSuffix from './email/suffixData';
 import { random } from './utils/random';
 import { checkGlobal, checkName, checkEmail } from './utils/check';
 import getEmail from './email/index';
@@ -12,6 +13,9 @@ class Fake {
       sex: 'male'
     };
     this.opts = Object.assign({}, defaultOpts, opts || {});
+    this.namesEn = namesEn;
+    this.namesZh = namesZh;
+    this.emailSuffix = emailSuffix;
   }
 
   /**
