@@ -6,8 +6,8 @@ describe('test random sex.', () => {
     const expected = [
       expect.stringMatching(/^[\u4E00-\u9FFF]{1}$/)
     ];
-    const randomName = fd.sex({lang: 'zh'});
-    expect(randomName).toEqual(
+    const randomSex = fd.sex({lang: 'zh'});
+    expect(randomSex).toEqual(
       expect.arrayContaining(expected)
     );
   });
@@ -16,8 +16,8 @@ describe('test random sex.', () => {
     const expected = [
       expect.stringMatching(/^[a-zA-Z]+$/)
     ];
-    const randomName = fd.sex({lang: 'en'});
-    expect(randomName).toEqual(
+    const randomSex = fd.sex({lang: 'en'});
+    expect(randomSex).toEqual(
       expect.arrayContaining(expected)
     );
   });
