@@ -1,8 +1,15 @@
 import namesEn from './name/en';
 import namesZh from './name/zh';
 import emailSuffix from './email/suffixData';
-import { random } from './utils/random';
-import { checkGlobal, checkName, checkEmail } from './utils/check';
+import {
+  random,
+  randomId
+} from './utils/random';
+import {
+  checkGlobal,
+  checkName,
+  checkEmail
+} from './utils/check';
 import getEmail from './email/index';
 
 class Fake {
@@ -65,6 +72,10 @@ class Fake {
     };
     const _opts = Object.assign({}, _defaults, opts || {});
     return getEmail(_opts);
+  }
+
+  id(length = 10) {
+    return randomId(length);
   }
 }
 

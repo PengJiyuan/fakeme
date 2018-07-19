@@ -14,10 +14,19 @@ export const randomNumber = (length) => {
 };
 
 export const randomLetter = (length = 10) => {
-  const str = 'abcdefghigklmnopqrstuvwxyz';
+  const str = 'abcdefghijklmnopqrstuvwxyz';
   let letters = '';
   for (let i = 0; i < length; i++) {
     letters += str[random(0, 25)];
   }
   return letters;
+};
+
+export const randomId = (length = 10) => {
+  const str = '~_0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  let id = '';
+  for (let i = 0; i < length; i++) {
+    id += str[random(0, 63)];
+  }
+  return id;
 };
