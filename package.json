@@ -2,7 +2,8 @@
   "name": "fakedata",
   "version": "0.0.0",
   "description": "Random generate name, email, address, id...",
-  "main": "index.js",
+  "main": "./lib/fakedata.cjs.js",
+  "module": "./lib/fakedata.es.js",
   "scripts": {
     "dev": "rollup -c -f cjs -o ./lib/fakedata.cjs.js -w",
     "build-cjs": "rollup -c -f cjs -o ./lib/fakedata.cjs.js",
