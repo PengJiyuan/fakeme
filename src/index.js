@@ -80,8 +80,25 @@ class Fake {
     return getEmail(_opts);
   }
 
-  id(length = 10) {
-    return randomId(length);
+  /**
+   * 
+   * @param {Object} opts
+   * 
+   * @opts.length
+   * @opts.count
+   */
+  id(opts) {
+    check(opts);
+    const _defaults = {
+      length: 10,
+      count: 1
+    };
+    const _opts = Object.assign({}, _defaults, opts || {});
+    let ids = [];
+    for (let i = 0; i < opts.count; i++) {
+      ids.push(randomId(opts.length));
+    }
+    return ids;
   }
 
   sex(opts) {

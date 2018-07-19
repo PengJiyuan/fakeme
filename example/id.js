@@ -1,5 +1,8 @@
-const RandomData = require('../lib/random-data.cjs');
+const RandomData = require('../lib/fakedata.cjs');
 
 const rd = new RandomData();
 
-console.log(rd.id(19));
+console.log(rd.id({
+  length: 19,
+  count: 10
+}));
