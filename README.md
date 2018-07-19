@@ -9,11 +9,11 @@
 
 #### Broswer
 
-[Source Code](https://github.com/PengJiyuan/fakeme/blob/master/lib/fakeme.umd.min.js);
+[Source Code](https://github.com/PengJiyuan/fakeme/blob/master/lib/fakeme.umd.min.js)
 
 #### CDN
 
-https://unpkg.com/fakeme@0.1.0/lib/fakedata.umd.min.js (更改fakeme后边的version号，获取指定版本的源文件)
+https://unpkg.com/fakeme@0.1.0/lib/fakeme.umd.min.js (更改fakeme后边的version号，获取指定版本的源文件)
 
 ## Usage
 
@@ -45,7 +45,7 @@ fm.name();
 #### 浏览器
 
 ```html
-<script src="https://unpkg.com/fakeme@0.1.0/lib/fakedata.umd.min.js"></script>
+<script src="https://unpkg.com/fakeme@0.1.0/lib/fakeme.umd.min.js"></script>
 <script>
 var fm = new FakeMe();
 fm.name();
