@@ -95,8 +95,8 @@ class Fake {
     };
     const _opts = Object.assign({}, _defaults, opts || {});
     let ids = [];
-    for (let i = 0; i < opts.count; i++) {
-      ids.push(randomId(opts.length));
+    for (let i = 0; i < _opts.count; i++) {
+      ids.push(randomId(_opts.length));
     }
     return ids;
   }
@@ -104,10 +104,15 @@ class Fake {
   sex(opts) {
     check(opts);
     const _defaults = {
-      lang: this.opts.lang
+      lang: this.opts.lang,
+      count: 1
     };
     const _opts = Object.assign({}, _defaults, opts || {});
-    return getSex(_opts);
+    let sexs = [];
+    for (let i = 0; i < _opts.count; i++) {
+      sexs.push(getSex(_opts))
+    }
+    return sexs;
   }
 
   random(list = [], count = 1) {
