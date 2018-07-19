@@ -118,7 +118,7 @@ class Fake {
   random(list = [], count = 1) {
     const length = list.length;
     let result = [];
-    if (isArray(list)) {
+    if (isArray(list) && list.length > 0) {
       for (let i = 0; i < count; i++) {
         result.push(list[random(0, length - 1)]);
       }

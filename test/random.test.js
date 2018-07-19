@@ -13,4 +13,11 @@ describe('test function Fake.random.', () => {
       expect.arrayContaining(expected)
     );
   });
+
+  it('matches if list and count is empty but ok.', () => {
+    const randomResult = fd.random();
+
+    expect(randomResult.length).toBe(0);
+    expect(randomResult).toEqual([]);
+  });
 });
