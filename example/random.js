@@ -1,4 +1,4 @@
-const RandomData = require('../lib/random-data.cjs');
+const RandomData = require('../lib/fakedata.cjs');
 
 const rd = new RandomData();
 
