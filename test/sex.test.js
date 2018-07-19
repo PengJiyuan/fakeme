@@ -21,4 +21,9 @@ describe('test random sex.', () => {
       expect.arrayContaining(expected)
     );
   });
+
+  it('matches if options is null but ok', () => {
+    const randomSex = fd.sex();
+    expect(randomSex.length).toBe(1);
+  });
 });
