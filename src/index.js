@@ -40,7 +40,8 @@ class Fake {
     checkName(opts);
     const _defaults = {
       lang: this.opts.lang,
-      sex: this.opts.sex
+      sex: this.opts.sex,
+      count: 1
     };
     const _opts = Object.assign({}, _defaults, opts || {});
     const names = {
@@ -48,15 +49,19 @@ class Fake {
       en: namesEn
     };
     const firstNames = names[_opts.lang].firstName[_opts.sex];
-    const firstName = firstNames.names[random(0, firstNames.count - 1)];
     const lastNames = names[_opts.lang].lastName;
-    let lastName = lastNames.names[random(0, lastNames.count - 1)];
-    let name;
-    if (_opts.lastName && ~lastNames.names.indexOf(_opts.lastName)) {
-      lastName = _opts.lastName;
+    let allNames = [];
+    for (let i = 0; i < _opts.count; i++) {
+      const firstName = firstNames.names[random(0, firstNames.count - 1)];
+      let lastName = lastNames.names[random(0, lastNames.count - 1)];
+      let name;
+      if (_opts.lastName && ~lastNames.names.indexOf(_opts.lastName)) {
+        lastName = _opts.lastName;
+      }
+      name = _opts.lang === 'en' ? `${firstName} ${lastName}` : `${lastName}${firstName}`;
+      allNames.push(name);
     }
-    name = _opts.lang === 'en' ? `${firstName} ${lastName}` : `${lastName}${firstName}`;
-    return name;
+    return allNames;
   }
 
   /**

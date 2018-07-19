@@ -1,4 +1,4 @@
-const RandomData = require('../lib/random-data.cjs');
+const RandomData = require('../lib/fakedata.cjs');
 
 const rd = new RandomData({
   lang: 'zh'
@@ -6,5 +6,6 @@ const rd = new RandomData({
 
 console.log(rd.name({
   sex: 'female',
-  lang: 'en'
+  lang: 'en',
+  count: 10
 }));
