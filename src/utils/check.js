@@ -1,9 +1,9 @@
-import { isObject } from './is';
+import { isObject, isNumber } from './is';
 const langs = ['zh', 'en'];
 const sexs = ['male', 'female'];
 const emailTypes = ['number', 'letter', 'name'];
 
-export const checkName = (opts) => {
+export default (opts) => {
   if (opts && !isObject(opts)) {
     throw 'param option should be an object';
   }
@@ -14,26 +14,10 @@ export const checkName = (opts) => {
   if (opts && opts.sex && !~sexs.indexOf(opts.sex)) {
     throw `sex should be one of ${sexs}`;
   }
-};
-
-export const checkGlobal = checkName;
-export const checkEmail = (opts) => {
-  if (opts && !isObject(opts)) {
-    throw 'param option should be an object';
-  }
-  if (opts && opts.sex && !~sexs.indexOf(opts.sex)) {
-    throw `sex should be one of ${sexs}`;
-  }
   if (opts && opts.type && !~emailTypes.indexOf(opts.type)) {
-    throw `sex should be one of ${emailTypes}`;
+    throw `type should be one of ${emailTypes}`;
   }
-};
-
-export const checkSex = (opts) => {
-  if (opts && !isObject(opts)) {
-    throw 'param option should be an object';
-  }
-  if (opts && opts.lang && !~langs.indexOf(opts.lang)) {
-    throw `sex should be one of ${langs}`;
+  if (opts && opts.count && !isNumber(opts.count)) {
+    throw `count must be a number type`;
   }
 };

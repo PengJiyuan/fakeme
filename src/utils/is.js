@@ -7,3 +7,8 @@ export function isObject(obj) {
 export function isArray(obj) {
   return __opt__.call(obj) === '[object Array]';
 };
+
+export function isNumber(obj) {
+  // NaN !== NaN
+  return (__opt__.call(obj) === '[object Number]') && obj === obj;
+};

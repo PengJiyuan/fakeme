@@ -5,19 +5,14 @@ import {
   random,
   randomId
 } from './utils/random';
-import {
-  checkGlobal,
-  checkName,
-  checkEmail,
-  checkSex
-} from './utils/check';
+import check from './utils/check';
 import getEmail from './email/index';
 import getSex from './sex/index';
 import { isArray } from './utils/is';
 
 class Fake {
   constructor(opts) {
-    checkGlobal(opts);
+    check(opts);
     const defaultOpts = {
       lang: 'zh',
       sex: 'male'
@@ -35,9 +30,10 @@ class Fake {
    * @opts.lang
    * @opts.sex
    * @opts.lastName
+   * @opts.count
    */
   name(opts) {
-    checkName(opts);
+    check(opts);
     const _defaults = {
       lang: this.opts.lang,
       sex: this.opts.sex,
@@ -71,12 +67,14 @@ class Fake {
    * @opts.sex
    * @opts.type - ['number', 'letter', 'name'] default: 'name'
    * @opts.suffix - specify custom suffix
+   * @opts.count
    */
   email(opts) {
-    checkEmail(opts);
+    check(opts);
     const _defaults = {
       sex: this.opts.sex,
-      type: 'name'
+      type: 'name',
+      count: 1
     };
     const _opts = Object.assign({}, _defaults, opts || {});
     return getEmail(_opts);
@@ -87,7 +85,7 @@ class Fake {
   }
 
   sex(opts) {
-    checkSex(opts);
+    check(opts);
     const _defaults = {
       lang: this.opts.lang
     };
