@@ -1,5 +1,3 @@
-// test whether the length of data is equal to count.
-
 const fakeData = require('../lib/fakedata.cjs');
 const fd = new fakeData();
 
@@ -9,7 +7,7 @@ describe('test random name.', () => {
       // match chinese output
       expect.stringMatching(/[\u4E00-\u9FFF]+/)
     ];
-    const randomName = fd.name({lang: 'zh', count: 10});
+    const randomName = fd.name({lang: 'zh', sex: 'male',  count: 10});
     expect(randomName).toEqual(
       expect.arrayContaining(expected)
     );
@@ -20,7 +18,7 @@ describe('test random name.', () => {
       // match english output
       expect.stringMatching(/^[a-zA-Z]+/)
     ];
-    const randomName = fd.name({lang: 'en', count: 10});
+    const randomName = fd.name({lang: 'en', sex: 'female', count: 10});
     expect(randomName).toEqual(
       expect.arrayContaining(expected)
     ); 
