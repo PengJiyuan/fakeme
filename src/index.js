@@ -1,3 +1,7 @@
+/**
+ * @AUTHOR PengJiyuan
+ * @LICENSE MIT
+ */
 import namesEn from './name/en';
 import namesZh from './name/zh';
 import emailSuffix from './email/suffixData';

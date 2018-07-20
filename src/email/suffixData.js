@@ -1,3 +1,7 @@
+/**
+ * @AUTHOR PengJiyuan
+ * @LICENSE MIT
+ */
 export default {
   list: [
     '@gmail.com','@yahoo.com','@msn.com','@hotmail.com','@aol.com','@ask.com','@live.com','@qq.com',
