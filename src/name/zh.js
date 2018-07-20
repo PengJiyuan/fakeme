@@ -1,7 +1,3 @@
-/**
- * @AUTHOR PengJiyuan
- * @LICENSE MIT
- */
 const firstName = {
   male: {
     names: [
