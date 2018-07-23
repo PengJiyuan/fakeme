@@ -21,7 +21,7 @@ export default (opts) => {
   if (opts && opts.count && !isNumber(opts.count)) {
     throw 'count must be a number type';
   }
-  if (opts && opts.length && !isNumber(opts.count)) {
+  if (opts && opts.length && !isNumber(opts.length)) {
     throw 'length must be a number type';
   }
 };
