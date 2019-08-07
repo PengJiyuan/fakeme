@@ -1,7 +1,7 @@
 // type check and throw error
 
 import { isObject, isNumber } from './is';
-const langs = ['zh', 'en'];
+const langs = ['zh', 'zh-hant', 'en'];
 const sexs = ['male', 'female'];
 const emailTypes = ['number', 'letter', 'name'];
 

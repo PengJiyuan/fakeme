@@ -1,11 +1,10 @@
-import { random } from '../utils/random';
 import suffix from './suffixData';
 
-const getSuffix = (opts) => {
+const getSuffix = (opts, random) => {
   if (opts.suffix) {
     return opts.suffix;
   } else {
-    return suffix.list[random(0, suffix.count - 1)];
+    return suffix.list[random.random(0, suffix.count - 1)];
   }
 };
 

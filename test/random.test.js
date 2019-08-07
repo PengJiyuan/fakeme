@@ -20,4 +20,13 @@ describe('test function Fake.random.', () => {
     expect(randomResult.length).toBe(0);
     expect(randomResult).toEqual([]);
   });
+
+  it('matches if seeds are the same.', () => {
+    const seed = 'Random Test!';
+    const ref = new fakeData({seed: seed}).random();
+    for(let i = 0; i < 10; i++ ) {
+      fd.seed(seed)
+      expect(fd.random()).toEqual(ref)
+    }
+  })
 });
