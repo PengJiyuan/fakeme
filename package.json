@@ -1,6 +1,6 @@
 {
   "name": "fakeme",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Random generate name, email, address, id...",
   "main": "./lib/fakeme.cjs.js",
   "module": "./lib/fakeme.es.js",
