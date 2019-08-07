@@ -1,5 +1,6 @@
 import namesEn from './name/en';
 import namesZh from './name/zh';
+import namesZhHant from './name/zh-hant';
 import emailSuffix from './email/suffixData';
 import {
   random,
@@ -20,6 +21,7 @@ class Fake {
     this.opts = Object.assign({}, defaultOpts, opts || {});
     this.namesEn = namesEn;
     this.namesZh = namesZh;
+    this.nameZhHant = namesZhHant;
     this.emailSuffix = emailSuffix;
   }
 
@@ -41,6 +43,7 @@ class Fake {
     };
     const _opts = Object.assign({}, _defaults, opts || {});
     const names = {
+      'zh-hant': namesZhHant,
       zh: namesZh,
       en: namesEn
     };

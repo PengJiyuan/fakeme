@@ -61,7 +61,7 @@ fm.name();
 
 #### opts.lang
 
-指定全局语言 [默认: `zh`]，`lang`的值只能为`zh`或者`en`。(这个值会被具体调用的函数里传的`lang`覆盖)
+指定全局语言 [默认: `zh`]，`lang`的值只能为`zh`、`zh-hant`或者`en`。(这个值会被具体调用的函数里传的`lang`覆盖)
 
 #### opts.sex
 
@@ -82,7 +82,7 @@ const fm = new FakeMe();
 
 这个参数指定生成中文或者英文的名字。
 
-如果不指定，默认使用全局配置的`lang`。`lang`的值只能为`zh`或者`en`。
+如果不指定，默认使用全局配置的`lang`。`lang`的值只能为`zh`、`zh-hant`或者`en`。
 
 #### opts.sex
 
