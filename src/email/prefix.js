@@ -1,7 +1,6 @@
 import names from '../name/en';
-import { random, randomLetter, randomNumber } from '../utils/random';
 
-const getPrefix = function(opts) {
+const getPrefix = function(opts, random) {
   let prefix;
   if (opts.type === 'name') {
     const list = names.lastName.names
@@ -10,13 +9,13 @@ const getPrefix = function(opts) {
     const count = names.lastName.count
       + names.firstName.male.count
       + names.firstName.female.count;
-    prefix = list[random(0, count - 1)];
+    prefix = list[random.random(0, count - 1)];
   }
   if (opts.type === 'number') {
-    prefix = randomNumber(1)[0];
+    prefix = random.randomNumber(1)[0];
   }
   if (opts.type === 'letter') {
-    prefix = randomLetter();
+    prefix = random.randomLetter();
   }
   return prefix.toLowerCase();
 };

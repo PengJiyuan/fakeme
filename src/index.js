@@ -2,10 +2,7 @@ import namesEn from './name/en';
 import namesZh from './name/zh';
 import namesZhHant from './name/zh-hant';
 import emailSuffix from './email/suffixData';
-import {
-  random,
-  randomId
-} from './utils/random';
+import Random from './utils/random';
 import check from './utils/check';
 import getEmail from './email/index';
 import getSex from './sex/index';
@@ -23,6 +20,7 @@ class Fake {
     this.namesZh = namesZh;
     this.nameZhHant = namesZhHant;
     this.emailSuffix = emailSuffix;
+    this.rand = new Random(this.opts.seed)
   }
 
   /**
@@ -51,8 +49,8 @@ class Fake {
     const lastNames = names[_opts.lang].lastName;
     let allNames = [];
     for (let i = 0; i < _opts.count; i++) {
-      const firstName = firstNames.names[random(0, firstNames.count - 1)];
-      let lastName = lastNames.names[random(0, lastNames.count - 1)];
+      const firstName = firstNames.names[this.rand.random(0, firstNames.count - 1)];
+      let lastName = lastNames.names[this.rand.random(0, lastNames.count - 1)];
       let name;
       if (_opts.lastName && ~lastNames.names.indexOf(_opts.lastName)) {
         lastName = _opts.lastName;
@@ -80,7 +78,7 @@ class Fake {
       count: 1
     };
     const _opts = Object.assign({}, _defaults, opts || {});
-    return getEmail(_opts);
+    return getEmail(_opts, this.rand);
   }
 
   /**
@@ -99,7 +97,7 @@ class Fake {
     const _opts = Object.assign({}, _defaults, opts || {});
     let ids = [];
     for (let i = 0; i < _opts.count; i++) {
-      ids.push(randomId(_opts.length));
+      ids.push(this.rand.randomId(_opts.length));
     }
     return ids;
   }
@@ -113,7 +111,7 @@ class Fake {
     const _opts = Object.assign({}, _defaults, opts || {});
     let sexs = [];
     for (let i = 0; i < _opts.count; i++) {
-      sexs.push(getSex(_opts))
+      sexs.push(getSex(_opts, this.rand))
     }
     return sexs;
   }
@@ -123,10 +121,14 @@ class Fake {
     let result = [];
     if (isArray(list) && list.length > 0) {
       for (let i = 0; i < count; i++) {
-        result.push(list[random(0, length - 1)]);
+        result.push(list[this.rand.random(0, length - 1)]);
       }
     }
     return result;
+  }
+
+  seed(seed) {
+    this.rand.seed(seed);
   }
 }
 

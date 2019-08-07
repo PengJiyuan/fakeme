@@ -54,5 +54,7 @@
   "files": [
     "lib/"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "random-seed": "^0.3.0"
+  }
 }
