@@ -30,6 +30,7 @@ const fm = new FakeMe({
 });
 fm.name({count: 10}); // [ '韶妙竹','宁初雪','彭幻珊','明醉波','云幼翠','高如曼','杨涵雁','吴青亦','孔之柔','红元菱' ]
 fm.name({lang: 'en', count: 5}); // [ 'Kristine Wood','Claudia Lopez','Annabelle Griffin','Greta Simmons','Sonia Walker' ]
+fm.name({lang: 'zh-hant', object: true}); // [ { lastName: '陳', firstName: '夢潔' } ]
 fm.id({length: 18, count: 2}); // [ 'FF4oAsoY_EGi1CJVfb', 'gnfDLKp_tJQd_NyQiK' ]
 fm.email(); // [ 'fanny@cairns.net.au' ]
 fm.sex(); // [ '男' ]
@@ -108,6 +109,18 @@ const fm = new FakeMe();
 
 ```javascript
 fm.name({lastName: '李'}); // [ '李秋白' ]
+```
+
+#### opts.object
+
+`可选`
+
+(默认值: `false`)
+
+这个参数将使姓名以物件的方式回传。
+
+```javascript
+fm.name({object: true}); // [ { lastName: '许', firstName: '语蝶' } ]
 ```
 
 ### fm.email(opts: Object): Array

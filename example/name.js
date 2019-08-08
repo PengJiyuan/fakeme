@@ -14,3 +14,5 @@ console.log(rd.name({lastName: '李'}));
 
 console.log(rd.name({lang: 'zh-hant', count: 3, lastName: '陳'}));
 
+console.log(rd.name({object: true}));
+

@@ -31,13 +31,15 @@ class Fake {
    * @opts.sex
    * @opts.lastName
    * @opts.count
+   * @opts.object
    */
   name(opts) {
     check(opts);
     const _defaults = {
       lang: this.opts.lang,
       sex: this.opts.sex,
-      count: 1
+      count: 1,
+      object:false,
     };
     const _opts = Object.assign({}, _defaults, opts || {});
     const names = {
@@ -55,7 +57,14 @@ class Fake {
       if (_opts.lastName && ~lastNames.names.indexOf(_opts.lastName)) {
         lastName = _opts.lastName;
       }
-      name = _opts.lang === 'en' ? `${firstName} ${lastName}` : `${lastName}${firstName}`;
+      if(_opts.object) {
+        name = {
+          lastName,
+          firstName
+        };
+      } else {
+        name = _opts.lang === 'en' ? `${firstName} ${lastName}` : `${lastName}${firstName}`;
+      }
       allNames.push(name);
     }
     return allNames;
