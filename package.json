@@ -9,7 +9,7 @@
     "build-cjs": "rollup -c -f cjs -o ./lib/fakeme.cjs.js",
     "build-umd-min": "rollup -c -f umd -n FakeMe -o ./lib/fakeme.umd.min.js --environment min",
     "build-es": "rollup -c -f es -o ./lib/fakeme.es.js",
-    "build-all": "npm run build-cjs && npm run build-umd-min && npm run build-es",
+    "build": "npm run build-cjs && npm run build-umd-min && npm run build-es",
     "test": "jest",
     "add": "git add ."
   },
@@ -47,7 +47,7 @@
     "collectCoverage": true
   },
   "pre-commit": [
-    "build-all",
+    "build",
     "add",
     "test"
   ],

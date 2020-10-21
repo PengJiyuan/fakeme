@@ -3,13 +3,10 @@ import names from '../name/en';
 const getPrefix = function(opts, random) {
   let prefix;
   if (opts.type === 'name') {
-    const list = names.lastName.names
-      .concat(names.firstName.male.names)
-      .concat(names.firstName.female.names);
-    const count = names.lastName.count
-      + names.firstName.male.count
-      + names.firstName.female.count;
-    prefix = list[random.random(0, count - 1)];
+    const list = names.lastName
+      .concat(names.firstName.male)
+      .concat(names.firstName.female);
+    prefix = list[random.random(0, list.length - 1)];
   }
   if (opts.type === 'number') {
     prefix = random.randomNumber(1)[0];

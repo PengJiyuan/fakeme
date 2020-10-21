@@ -7,7 +7,7 @@ describe('test random name.', () => {
       // match chinese output
       expect.stringMatching(/[\u4E00-\u9FFF]+/)
     ];
-    const randomName = fd.name({lang: 'zh', sex: 'male',  count: 10});
+    const randomName = fd.name({lang: 'zh', sex: 'male', count: 10});
 
     expect(randomName.length).toBe(10);
     expect(randomName).toEqual(

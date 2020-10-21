@@ -1,10 +1,10 @@
-import suffix from './suffixData';
+import suffix from './suffixList';
 
 const getSuffix = (opts, random) => {
   if (opts.suffix) {
     return opts.suffix;
   } else {
-    return suffix.list[random.random(0, suffix.count - 1)];
+    return suffix[random.random(0, suffix.length - 1)];
   }
 };
 

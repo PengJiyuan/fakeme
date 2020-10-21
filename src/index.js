@@ -1,7 +1,7 @@
 import namesEn from './name/en';
 import namesZh from './name/zh';
 import namesZhHant from './name/zh-hant';
-import emailSuffix from './email/suffixData';
+import emailSuffix from './email/suffixList';
 import Random from './utils/random';
 import check from './utils/check';
 import getEmail from './email/index';
@@ -51,10 +51,10 @@ class Fake {
     const lastNames = names[_opts.lang].lastName;
     let allNames = [];
     for (let i = 0; i < _opts.count; i++) {
-      const firstName = firstNames.names[this.rand.random(0, firstNames.count - 1)];
-      let lastName = lastNames.names[this.rand.random(0, lastNames.count - 1)];
+      const firstName = firstNames[this.rand.random(0, firstNames.length - 1)];
+      let lastName = lastNames[this.rand.random(0, lastNames.length - 1)];
       let name;
-      if (_opts.lastName && ~lastNames.names.indexOf(_opts.lastName)) {
+      if (_opts.lastName && ~lastNames.indexOf(_opts.lastName)) {
         lastName = _opts.lastName;
       }
       if(_opts.object) {
