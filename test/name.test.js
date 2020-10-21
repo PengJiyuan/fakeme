@@ -33,4 +33,10 @@ describe('test random name.', () => {
     const randomName = fd.name({lang: 'en', lastName});
     expect(randomName[0].split(' ')[1]).toBe(lastName);
   });
+
+  it('sould return an array of object if specified in option', () => {
+    const randomName = fd.name({object: true});
+    expect(randomName[0]).toHaveProperty('lastName');
+    expect(randomName[0]).toHaveProperty('firstName');
+  });
 });
